@@ -4,7 +4,7 @@ import { Amplify } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 //import awsConfig from './aws-exports';
-
+import {NavBar} from "./ui-components";
 
 Amplify.configure({
 	//update these values with the deployed values from your CDK application once deployed (frontend-config.json via npm run deploy)
@@ -25,6 +25,7 @@ Amplify.configure({
 function App() {
   return (
     <div className="App">
+       <NavBar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
