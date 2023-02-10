@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Amplify } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
-import {AmplifyProvider} from "@aws-amplify/ui-react";
+//import {AmplifyProvider} from "@aws-amplify/ui-react";
 //import awsConfig from './aws-exports';
 import {NavBar} from "./ui-components";
 
@@ -23,9 +23,19 @@ Amplify.configure({
 
 
 function App() {
+
+  const navbarOverrides = {
+    "icons8-car-48 1": {
+      src: "https://img.icons8.com/color/50/000000/car--v1.png", // app logo
+    },
+    "image": {
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrevPVu9sSsE09oyZ3kxh-DBOpaCEauWOpDwQmUgqeng&s", // profile image
+    },
+  };
+
   return (
     <div className="App">
-       <NavBar/>
+       <NavBar overrides={navbarOverrides} width="100%"/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
