@@ -4,7 +4,7 @@ import { Amplify } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 //import {AmplifyProvider} from "@aws-amplify/ui-react";
 //import awsConfig from './aws-exports';
-import {NavBar} from "./ui-components";
+import {NavBar, NewCarsCollection} from "./ui-components";
 
 Amplify.configure({
 	//update these values with the deployed values from your CDK application once deployed (frontend-config.json via npm run deploy)
@@ -37,18 +37,8 @@ function App() {
     <div className="App">
        <NavBar overrides={navbarOverrides} width="100%"/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
+        <NewCarsCollection />
       </header>
     </div>
   );

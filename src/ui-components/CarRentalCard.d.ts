@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { RentalCar } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -18,6 +19,8 @@ export declare type CarRentalCardOverridesProps = {
     "Car Description"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type CarRentalCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    rentleCar?: RentalCar;
+} & {
     overrides?: CarRentalCardOverridesProps | undefined | null;
 }>;
 export default function CarRentalCard(props: CarRentalCardProps): React.ReactElement;
