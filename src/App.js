@@ -1,5 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { Amplify } from 'aws-amplify';
+import "@aws-amplify/ui-react/styles.css";
+import { withAuthenticator, Divider } from "@aws-amplify/ui-react"
+import { DataStore } from '@aws-amplify/datastore';
+//import {AmplifyProvider} from "@aws-amplify/ui-react";
+import awsConfig from './aws-exports';
+//import {NavBar, CarRentalCardCollection, AddCar} from "./ui-components";
+import { useState } from 'react';
+//import { RentalCar } from './models';
+
+
+Amplify.configure(awsConfig)
+
 
 function App() {
   return (
