@@ -10,7 +10,6 @@ import awsConfig from './aws-exports';
 //import { useState } from 'react';
 //import { RentalCar } from './models';
 
-
 Amplify.configure(awsConfig)
 
 
