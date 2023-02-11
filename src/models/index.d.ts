@@ -12,7 +12,7 @@ type EagerRentalCar = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly nam: string;
+  readonly name: string;
   readonly price?: number | null;
   readonly description?: string | null;
   readonly imageUrl?: string | null;
@@ -26,7 +26,7 @@ type LazyRentalCar = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly nam: string;
+  readonly name: string;
   readonly price?: number | null;
   readonly description?: string | null;
   readonly imageUrl?: string | null;

@@ -3,9 +3,9 @@ import './App.css';
 import { Amplify } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 //import {AmplifyProvider} from "@aws-amplify/ui-react";
-//import awsConfig from './aws-exports';
-import {NavBar, NewCarsCollection} from "./ui-components";
-
+import awsConfig from './aws-exports';
+import {NavBar, CarRentalCardCollection} from "./ui-components";
+/* 
 Amplify.configure({
 	//update these values with the deployed values from your CDK application once deployed (frontend-config.json via npm run deploy)
 	Auth: {
@@ -15,12 +15,13 @@ Amplify.configure({
 		identityPoolId: 'us-east-2:44b91e14-ca9a-4ec5-a870-e871699c12c2',
 	},
 	aws_project_region: 'us-east-2',
-	aws_appsync_graphqlEndpoint:'https://6wh64s2heratlirnifqg6fculy.appsync-api.us-east-2.amazonaws.com/graphql',
+	aws_appsync_graphqlEndpoint:'https://g7sswfrfxfgjflzcefrcvf6l2i.appsync-api.us-east-2.amazonaws.com/graphql',
 	aws_appsync_region: 'us-east-2',
 	aws_appsync_authenticationType: 'AMAZON_COGNITO_USER_POOLS',
 	aws_appsync_apiKey: null,
 })
-
+ */
+Amplify.configure(awsConfig)
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
        <NavBar overrides={navbarOverrides} width="100%"/>
       <header className="App-header">
       
-        <NewCarsCollection />
+        <CarRentalCardCollection />
       </header>
     </div>
   );

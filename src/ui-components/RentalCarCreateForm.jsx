@@ -23,12 +23,12 @@ export default function RentalCarCreateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    nam: "",
+    name: "",
     price: "",
     description: "",
     imageUrl: "",
   };
-  const [nam, setNam] = React.useState(initialValues.nam);
+  const [name, setName] = React.useState(initialValues.name);
   const [price, setPrice] = React.useState(initialValues.price);
   const [description, setDescription] = React.useState(
     initialValues.description
@@ -36,14 +36,14 @@ export default function RentalCarCreateForm(props) {
   const [imageUrl, setImageUrl] = React.useState(initialValues.imageUrl);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
-    setNam(initialValues.nam);
+    setName(initialValues.name);
     setPrice(initialValues.price);
     setDescription(initialValues.description);
     setImageUrl(initialValues.imageUrl);
     setErrors({});
   };
   const validations = {
-    nam: [{ type: "Required" }],
+    name: [{ type: "Required" }],
     price: [],
     description: [],
     imageUrl: [],
@@ -73,7 +73,7 @@ export default function RentalCarCreateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          nam,
+          name,
           price,
           description,
           imageUrl,
@@ -123,31 +123,31 @@ export default function RentalCarCreateForm(props) {
       {...rest}
     >
       <TextField
-        label="Nam"
+        label="Name"
         isRequired={true}
         isReadOnly={false}
-        value={nam}
+        value={name}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nam: value,
+              name: value,
               price,
               description,
               imageUrl,
             };
             const result = onChange(modelFields);
-            value = result?.nam ?? value;
+            value = result?.name ?? value;
           }
-          if (errors.nam?.hasError) {
-            runValidationTasks("nam", value);
+          if (errors.name?.hasError) {
+            runValidationTasks("name", value);
           }
-          setNam(value);
+          setName(value);
         }}
-        onBlur={() => runValidationTasks("nam", nam)}
-        errorMessage={errors.nam?.errorMessage}
-        hasError={errors.nam?.hasError}
-        {...getOverrideProps(overrides, "nam")}
+        onBlur={() => runValidationTasks("name", name)}
+        errorMessage={errors.name?.errorMessage}
+        hasError={errors.name?.hasError}
+        {...getOverrideProps(overrides, "name")}
       ></TextField>
       <TextField
         label="Price"
@@ -162,7 +162,7 @@ export default function RentalCarCreateForm(props) {
             : parseFloat(e.target.value);
           if (onChange) {
             const modelFields = {
-              nam,
+              name,
               price: value,
               description,
               imageUrl,
@@ -189,7 +189,7 @@ export default function RentalCarCreateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nam,
+              name,
               price,
               description: value,
               imageUrl,
@@ -216,7 +216,7 @@ export default function RentalCarCreateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nam,
+              name,
               price,
               description,
               imageUrl: value,

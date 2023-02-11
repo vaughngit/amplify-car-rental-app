@@ -14,13 +14,13 @@ export declare type ValidationResponse = {
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type RentalCarUpdateFormInputValues = {
-    nam?: string;
+    name?: string;
     price?: number;
     description?: string;
     imageUrl?: string;
 };
 export declare type RentalCarUpdateFormValidationValues = {
-    nam?: ValidationFunction<string>;
+    name?: ValidationFunction<string>;
     price?: ValidationFunction<number>;
     description?: ValidationFunction<string>;
     imageUrl?: ValidationFunction<string>;
@@ -28,7 +28,7 @@ export declare type RentalCarUpdateFormValidationValues = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type RentalCarUpdateFormOverridesProps = {
     RentalCarUpdateFormGrid?: PrimitiveOverrideProps<GridProps>;
-    nam?: PrimitiveOverrideProps<TextFieldProps>;
+    name?: PrimitiveOverrideProps<TextFieldProps>;
     price?: PrimitiveOverrideProps<TextFieldProps>;
     description?: PrimitiveOverrideProps<TextFieldProps>;
     imageUrl?: PrimitiveOverrideProps<TextFieldProps>;

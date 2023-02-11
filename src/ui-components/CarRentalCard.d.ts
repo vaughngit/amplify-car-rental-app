@@ -19,7 +19,7 @@ export declare type CarRentalCardOverridesProps = {
     "Car Description"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type CarRentalCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    rentleCar?: RentalCar;
+    rentalCar?: RentalCar;
 } & {
     overrides?: CarRentalCardOverridesProps | undefined | null;
 }>;
