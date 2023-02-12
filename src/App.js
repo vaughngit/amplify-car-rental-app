@@ -6,11 +6,11 @@ import "@aws-amplify/ui-react/styles.css";
 import { withAuthenticator, Divider } from "@aws-amplify/ui-react"
 import { DataStore } from '@aws-amplify/datastore';
 //import {AmplifyProvider} from "@aws-amplify/ui-react";
-//import awsConfig from './aws-exports';
+import awsConfig from './aws-exports';
 import {NavBar, CarRentalCardCollection, AddCar} from "./ui-components";
 import { useState } from 'react';
 import { RentalCar } from './models';
- 
+/*  
 Amplify.configure({
   "aws_project_region": "us-east-2",
   "aws_appsync_graphqlEndpoint": "https://g7sswfrfxfgjflzcefrcvf6l2i.appsync-api.us-east-2.amazonaws.com/graphql",
@@ -47,8 +47,8 @@ Amplify.configure({
       "EMAIL"
   ]
 })
- 
-//Amplify.configure(awsConfig)
+  */
+Amplify.configure(awsConfig)
 
 function App({user, signOut}) {
 
