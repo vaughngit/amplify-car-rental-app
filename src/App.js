@@ -1,6 +1,5 @@
 //import logo from './logo.svg';
 import './App.css';
-
 import { Amplify } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import { withAuthenticator, Divider } from "@aws-amplify/ui-react"
@@ -11,42 +10,7 @@ import {NavBar, CarRentalCardCollection, AddCar} from "./ui-components";
 import { useState } from 'react';
 import { RentalCar } from './models';
 /*  
-Amplify.configure({
-  "aws_project_region": "us-east-2",
-  "aws_appsync_graphqlEndpoint": "https://g7sswfrfxfgjflzcefrcvf6l2i.appsync-api.us-east-2.amazonaws.com/graphql",
-  "aws_appsync_region": "us-east-2",
-  "aws_appsync_authenticationType": "API_KEY",
-  "aws_appsync_apiKey": "da2-tlfbtbjwavekrhta5rid54zzee",
-  "aws_cognito_identity_pool_id": "us-east-2:d7047dd8-258f-4675-a711-b94540445a2a",
-  "aws_cognito_region": "us-east-2",
-  "aws_user_pools_id": "us-east-2_85Vj5661d",
-  "aws_user_pools_web_client_id": "15oko5qc44q1gu9kvb7s0cdplv",
-  "oauth": {},
-  "aws_cognito_username_attributes": [
-      "EMAIL"
-  ],
-  "aws_cognito_social_providers": [],
-  "aws_cognito_signup_attributes": [
-      "NAME",
-      "PROFILE"
-  ],
-  "aws_cognito_mfa_configuration": "OFF",
-  "aws_cognito_mfa_types": [
-      "SMS"
-  ],
-  "aws_cognito_password_protection_settings": {
-      "passwordPolicyMinLength": 8,
-      "passwordPolicyCharacters": [
-          "REQUIRES_LOWERCASE",
-          "REQUIRES_NUMBERS",
-          "REQUIRES_SYMBOLS",
-          "REQUIRES_UPPERCASE"
-      ]
-  },
-  "aws_cognito_verification_mechanisms": [
-      "EMAIL"
-  ]
-})
+Amplify.configure({})
   */
 Amplify.configure(awsConfig)
 

@@ -84,7 +84,7 @@ export default function CarRentalCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={`${"$"}${rentalCar?.price}${" /day"}`}
+            children={`${"$"}${rentalCar?.price}${"/ day"}`}
             {...getOverrideProps(overrides, "$50 USD / day")}
           ></Text>
           <Text

@@ -16,9 +16,7 @@ import CarRentalCard from "./CarRentalCard";
 import { Collection } from "@aws-amplify/ui-react";
 export default function CarRentalCardCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const itemsPagination = {
-    sort: (s) => s.createdAt(SortDirection.DESCENDING),
-  };
+  const itemsPagination = { sort: (s) => s.price(SortDirection.ASCENDING) };
   const [items, setItems] = React.useState(undefined);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
@@ -36,7 +34,7 @@ export default function CarRentalCardCollection(props) {
     <Collection
       type="grid"
       searchPlaceholder="Search..."
-      templateColumns="1fr 1fr 1fr"
+      templateColumns="1fr 1fr"
       autoFlow="row"
       alignItems="stretch"
       justifyContent="stretch"
