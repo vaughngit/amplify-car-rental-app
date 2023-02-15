@@ -13,26 +13,26 @@ export declare type ValidationResponse = {
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type VideosCreateFormInputValues = {
-    url?: string;
-    item?: string;
-    title?: string;
+    titl?: string;
     filename?: string;
+    item?: string;
+    url?: string;
     label?: string;
 };
 export declare type VideosCreateFormValidationValues = {
-    url?: ValidationFunction<string>;
-    item?: ValidationFunction<string>;
-    title?: ValidationFunction<string>;
+    titl?: ValidationFunction<string>;
     filename?: ValidationFunction<string>;
+    item?: ValidationFunction<string>;
+    url?: ValidationFunction<string>;
     label?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type VideosCreateFormOverridesProps = {
     VideosCreateFormGrid?: PrimitiveOverrideProps<GridProps>;
-    url?: PrimitiveOverrideProps<TextFieldProps>;
-    item?: PrimitiveOverrideProps<TextFieldProps>;
-    title?: PrimitiveOverrideProps<TextFieldProps>;
+    titl?: PrimitiveOverrideProps<TextFieldProps>;
     filename?: PrimitiveOverrideProps<TextFieldProps>;
+    item?: PrimitiveOverrideProps<TextFieldProps>;
+    url?: PrimitiveOverrideProps<TextFieldProps>;
     label?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type VideosCreateFormProps = React.PropsWithChildren<{

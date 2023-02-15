@@ -12,10 +12,10 @@ type EagerVideos = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly url?: string | null;
-  readonly item?: string | null;
-  readonly title?: string | null;
+  readonly titl?: string | null;
   readonly filename?: string | null;
+  readonly item?: string | null;
+  readonly url?: string | null;
   readonly label?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -27,10 +27,10 @@ type LazyVideos = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly url?: string | null;
-  readonly item?: string | null;
-  readonly title?: string | null;
+  readonly titl?: string | null;
   readonly filename?: string | null;
+  readonly item?: string | null;
+  readonly url?: string | null;
   readonly label?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;

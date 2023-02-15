@@ -24,26 +24,26 @@ export default function VideosUpdateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    url: "",
-    item: "",
-    title: "",
+    titl: "",
     filename: "",
+    item: "",
+    url: "",
     label: "",
   };
-  const [url, setUrl] = React.useState(initialValues.url);
-  const [item, setItem] = React.useState(initialValues.item);
-  const [title, setTitle] = React.useState(initialValues.title);
+  const [titl, setTitl] = React.useState(initialValues.titl);
   const [filename, setFilename] = React.useState(initialValues.filename);
+  const [item, setItem] = React.useState(initialValues.item);
+  const [url, setUrl] = React.useState(initialValues.url);
   const [label, setLabel] = React.useState(initialValues.label);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = videosRecord
       ? { ...initialValues, ...videosRecord }
       : initialValues;
-    setUrl(cleanValues.url);
-    setItem(cleanValues.item);
-    setTitle(cleanValues.title);
+    setTitl(cleanValues.titl);
     setFilename(cleanValues.filename);
+    setItem(cleanValues.item);
+    setUrl(cleanValues.url);
     setLabel(cleanValues.label);
     setErrors({});
   };
@@ -57,10 +57,10 @@ export default function VideosUpdateForm(props) {
   }, [idProp, videos]);
   React.useEffect(resetStateValues, [videosRecord]);
   const validations = {
-    url: [],
-    item: [],
-    title: [],
+    titl: [],
     filename: [],
+    item: [],
+    url: [],
     label: [],
   };
   const runValidationTasks = async (
@@ -88,10 +88,10 @@ export default function VideosUpdateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          url,
-          item,
-          title,
+          titl,
           filename,
+          item,
+          url,
           label,
         };
         const validationResponses = await Promise.all(
@@ -140,88 +140,32 @@ export default function VideosUpdateForm(props) {
       {...rest}
     >
       <TextField
-        label="Url"
+        label="Titl"
         isRequired={false}
         isReadOnly={false}
-        value={url}
+        value={titl}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              url: value,
+              titl: value,
+              filename,
               item,
-              title,
-              filename,
-              label,
-            };
-            const result = onChange(modelFields);
-            value = result?.url ?? value;
-          }
-          if (errors.url?.hasError) {
-            runValidationTasks("url", value);
-          }
-          setUrl(value);
-        }}
-        onBlur={() => runValidationTasks("url", url)}
-        errorMessage={errors.url?.errorMessage}
-        hasError={errors.url?.hasError}
-        {...getOverrideProps(overrides, "url")}
-      ></TextField>
-      <TextField
-        label="Item"
-        isRequired={false}
-        isReadOnly={false}
-        value={item}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
               url,
-              item: value,
-              title,
-              filename,
               label,
             };
             const result = onChange(modelFields);
-            value = result?.item ?? value;
+            value = result?.titl ?? value;
           }
-          if (errors.item?.hasError) {
-            runValidationTasks("item", value);
+          if (errors.titl?.hasError) {
+            runValidationTasks("titl", value);
           }
-          setItem(value);
+          setTitl(value);
         }}
-        onBlur={() => runValidationTasks("item", item)}
-        errorMessage={errors.item?.errorMessage}
-        hasError={errors.item?.hasError}
-        {...getOverrideProps(overrides, "item")}
-      ></TextField>
-      <TextField
-        label="Title"
-        isRequired={false}
-        isReadOnly={false}
-        value={title}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              url,
-              item,
-              title: value,
-              filename,
-              label,
-            };
-            const result = onChange(modelFields);
-            value = result?.title ?? value;
-          }
-          if (errors.title?.hasError) {
-            runValidationTasks("title", value);
-          }
-          setTitle(value);
-        }}
-        onBlur={() => runValidationTasks("title", title)}
-        errorMessage={errors.title?.errorMessage}
-        hasError={errors.title?.hasError}
-        {...getOverrideProps(overrides, "title")}
+        onBlur={() => runValidationTasks("titl", titl)}
+        errorMessage={errors.titl?.errorMessage}
+        hasError={errors.titl?.hasError}
+        {...getOverrideProps(overrides, "titl")}
       ></TextField>
       <TextField
         label="Filename"
@@ -232,10 +176,10 @@ export default function VideosUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              url,
-              item,
-              title,
+              titl,
               filename: value,
+              item,
+              url,
               label,
             };
             const result = onChange(modelFields);
@@ -252,6 +196,62 @@ export default function VideosUpdateForm(props) {
         {...getOverrideProps(overrides, "filename")}
       ></TextField>
       <TextField
+        label="Item"
+        isRequired={false}
+        isReadOnly={false}
+        value={item}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              titl,
+              filename,
+              item: value,
+              url,
+              label,
+            };
+            const result = onChange(modelFields);
+            value = result?.item ?? value;
+          }
+          if (errors.item?.hasError) {
+            runValidationTasks("item", value);
+          }
+          setItem(value);
+        }}
+        onBlur={() => runValidationTasks("item", item)}
+        errorMessage={errors.item?.errorMessage}
+        hasError={errors.item?.hasError}
+        {...getOverrideProps(overrides, "item")}
+      ></TextField>
+      <TextField
+        label="Url"
+        isRequired={false}
+        isReadOnly={false}
+        value={url}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              titl,
+              filename,
+              item,
+              url: value,
+              label,
+            };
+            const result = onChange(modelFields);
+            value = result?.url ?? value;
+          }
+          if (errors.url?.hasError) {
+            runValidationTasks("url", value);
+          }
+          setUrl(value);
+        }}
+        onBlur={() => runValidationTasks("url", url)}
+        errorMessage={errors.url?.errorMessage}
+        hasError={errors.url?.hasError}
+        {...getOverrideProps(overrides, "url")}
+      ></TextField>
+      <TextField
         label="Label"
         isRequired={false}
         isReadOnly={false}
@@ -260,10 +260,10 @@ export default function VideosUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              url,
-              item,
-              title,
+              titl,
               filename,
+              item,
+              url,
               label: value,
             };
             const result = onChange(modelFields);

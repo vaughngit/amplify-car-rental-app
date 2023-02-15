@@ -10,8 +10,15 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "url": {
-                    "name": "url",
+                "titl": {
+                    "name": "titl",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "filename": {
+                    "name": "filename",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -24,15 +31,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "title": {
-                    "name": "title",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "filename": {
-                    "name": "filename",
+                "url": {
+                    "name": "url",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -91,5 +91,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.3.5",
-    "version": "2a3f338594fa9555c295ba1f5478758c"
+    "version": "84d717a2cdbb0ded2e21b526d2136b4e"
 };

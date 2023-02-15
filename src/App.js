@@ -6,6 +6,7 @@ import "@aws-amplify/ui-react/styles.css";
 //import { DataStore } from '@aws-amplify/datastore';
 //import {AmplifyProvider} from "@aws-amplify/ui-react";
 import awsConfig from './aws-exports';
+import Player from './Player';
 //import {NavBar, CarRentalCardCollection, AddCar} from "./ui-components";
 //import { useState } from 'react';
 //import { RentalCar } from './models';
@@ -28,6 +29,7 @@ function App() {
         >
           Learn React
         </a>
+        <Player/>
       </header>
     </div>
   );
