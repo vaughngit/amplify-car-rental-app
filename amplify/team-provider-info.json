@@ -10,17 +10,6 @@
       "StackName": "amplify-amplifyconsoledemo-dev-201133",
       "StackId": "arn:aws:cloudformation:us-east-2:796072252262:stack/amplify-amplifyconsoledemo-dev-201133/47de6d80-aa48-11ed-a666-06d34c769066",
       "AmplifyAppId": "d3kxkmhh9eoyaq"
-    },
-    "categories": {
-      "storage": {
-        "DynamodbBackendDataTable447BC44EK08SNZA5KREO": {
-          "tableName": "DynamodbBackend-DataTable447BC44E-K08SNZA5KREO",
-          "region": "us-east-2",
-          "arn": "arn:aws:dynamodb:us-east-2:796072252262:table/DynamodbBackend-DataTable447BC44E-K08SNZA5KREO",
-          "partitionKeyName": "id",
-          "partitionKeyType": "S"
-        }
-      }
     }
   }
 }
