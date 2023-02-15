@@ -1,10 +1,55 @@
 {
   "api": {},
   "auth": {},
-  "custom": {
-    "customResourceSQS01": {
+  "custom": {},
+  "parameters": {
+    "AMPLIFY_storage_DynamodbBackendDataTable447BC44EK08SNZA5KREO_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "DynamodbBackendDataTable447BC44EK08SNZA5KREO"
+        }
+      ]
+    },
+    "AMPLIFY_storage_DynamodbBackendDataTable447BC44EK08SNZA5KREO_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "DynamodbBackendDataTable447BC44EK08SNZA5KREO"
+        }
+      ]
+    },
+    "AMPLIFY_storage_DynamodbBackendDataTable447BC44EK08SNZA5KREO_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "DynamodbBackendDataTable447BC44EK08SNZA5KREO"
+        }
+      ]
+    },
+    "AMPLIFY_storage_DynamodbBackendDataTable447BC44EK08SNZA5KREO_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "DynamodbBackendDataTable447BC44EK08SNZA5KREO"
+        }
+      ]
+    },
+    "AMPLIFY_storage_DynamodbBackendDataTable447BC44EK08SNZA5KREO_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "DynamodbBackendDataTable447BC44EK08SNZA5KREO"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "DynamodbBackendDataTable447BC44EK08SNZA5KREO": {
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
-      "service": "customCDK"
+      "service": "DynamoDB",
+      "serviceType": "imported"
     }
   }
 }

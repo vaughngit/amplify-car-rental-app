@@ -1,7 +1,7 @@
 export const schema = {
     "models": {
-        "RentalCar": {
-            "name": "RentalCar",
+        "Videos": {
+            "name": "Videos",
             "fields": {
                 "id": {
                     "name": "id",
@@ -10,29 +10,36 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "name": {
-                    "name": "name",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "price": {
-                    "name": "price",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "description": {
-                    "name": "description",
+                "url": {
+                    "name": "url",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
-                "imageUrl": {
-                    "name": "imageUrl",
+                "item": {
+                    "name": "item",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "title": {
+                    "name": "title",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "filename": {
+                    "name": "filename",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "label": {
+                    "name": "label",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -56,7 +63,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "RentalCars",
+            "pluralName": "Videos",
             "attributes": [
                 {
                     "type": "model",
@@ -84,5 +91,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.3.5",
-    "version": "479c4d50898f5103669e6c1d804f1615"
+    "version": "2a3f338594fa9555c295ba1f5478758c"
 };

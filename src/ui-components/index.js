@@ -5,5 +5,5 @@
  **************************************************************************/
 
 export { default as studioTheme } from "./studioTheme";
-export { default as RentalCarCreateForm } from "./RentalCarCreateForm";
-export { default as RentalCarUpdateForm } from "./RentalCarUpdateForm";
+export { default as VideosCreateForm } from "./VideosCreateForm";
+export { default as VideosUpdateForm } from "./VideosUpdateForm";
