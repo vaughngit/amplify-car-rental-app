@@ -1,6 +1,12 @@
 [
   {
-    "Action": [],
-    "Resource": []
+    "Action": [
+      "sns:Publish",
+      "sns:Subscribe"
+    ],
+    "Effect" : "Allow",
+    "Resource": [
+      "*"
+    ]
   }
 ]
