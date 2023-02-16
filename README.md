@@ -75,3 +75,14 @@ amplify remove custom
 amplify remove storage
 amplify env list 
 amplify import storage
+
+## lambda layer config:
+Next steps:
+Move your libraries to the following folder:
+[NodeJS]: amplify\backend\function\helloworldappdemoamplifylayer\lib\nodejs
+
+Include any files you want to share across runtimes in this folder:
+amplify\backend\function\helloworldappdemoamplifylayer\opt
+
+"amplify function update <function-name>" - configure a function with this Lambda layer
+"amplify push" - builds all of your local backend resources and provisions them in the cloud

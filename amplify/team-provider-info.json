@@ -10,6 +10,11 @@
       "StackName": "amplify-amplifyconsoledemo-dev-201133",
       "StackId": "arn:aws:cloudformation:us-east-2:796072252262:stack/amplify-amplifyconsoledemo-dev-201133/47de6d80-aa48-11ed-a666-06d34c769066",
       "AmplifyAppId": "d3kxkmhh9eoyaq"
+    },
+    "categories": {
+      "function": {
+        "videoaddstream": {}
+      }
     }
   }
 }
