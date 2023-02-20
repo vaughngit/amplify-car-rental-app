@@ -4,7 +4,9 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
+export { default as VideoCard } from "./VideoCard";
 export { default as Features2x2 } from "./Features2x2";
+export { default as VideoCardCollection } from "./VideoCardCollection";
 export { default as ContactUs } from "./ContactUs";
 export { default as ProductCard } from "./ProductCard";
 export { default as Features4x1 } from "./Features4x1";
@@ -30,6 +32,7 @@ export { default as AddCar } from "./AddCar";
 export { default as MarketingFooter } from "./MarketingFooter";
 export { default as HeroLayout3 } from "./HeroLayout3";
 export { default as TallCard } from "./TallCard";
+export { default as VideoCard2 } from "./VideoCard2";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as SideBar } from "./SideBar";

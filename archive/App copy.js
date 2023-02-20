@@ -8,7 +8,7 @@ import { DataStore } from '@aws-amplify/datastore';
 // 1. import `ChakraProvider` component
 //import { ChakraProvider } from '@chakra-ui/react'
 import awsConfig from './aws-exports';
-import {NavBar, VideoCard, VideoCardCollection} from "./ui-components";
+import {NavBar, VideoCard} from "./ui-components";
 import { Videos } from './Videos';
 import { useState } from 'react';
 import { RentalCar } from './models';
@@ -88,15 +88,6 @@ function App({user, signOut}) {
     }
   };
 
-  // const videoOverRides = {
-  //   "Card Area"={
-  //     <video width="100%" height="100%" controls>
-  //      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> 
-  //     {/* <source src={vid.imageUrl} type="video/mp4" /> */}
-  //     </video>
-  //   }
-  // }
-
 
 
   return (
@@ -107,33 +98,31 @@ function App({user, signOut}) {
         {/* <AddCar overrides={addCarOverrides} style={{textAlign: "left", margin: "1re"}} /> */}
         <Divider />
         {/* <CarRentalCardCollection /> */}
+        {/* <Box sx={{ width: '100%' }}> */}
+       {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>  */}
+       <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+      {/* <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}> */}
+        <Videos>
+        {
+          // map through each post on the timeline and create a card 
+            ({vid}) =>(
+            <Card key={vid.id}>
+                 {console.log( vid)} 
+                  <div>
+                    <video width="100%" height="100%" controls>
+                        {/* <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> */}
+                        <source src={vid.imageUrl} type="video/mp4" />
+                    </video>
 
-
-      
-        <VideoCard 
-          // videoArea={
-          //   <video width="100%" height="100%" controls>
-          //     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> 
-          //   {/* <source src={vid.imageUrl} type="video/mp4" /> */}
-          //   </video>
-          // }
-        />
-        
-        <VideoCardCollection
-            overrideItems={({ item }) => ({
-            
-            videoArea: 
-              <div>
-                <video width="100%" height="100%" controls>
-                  <source src={item.imageUrl} type="video/mp4" /> 
-                {/* <source src={vid.imageUrl} type="video/mp4" /> */}
-                </video>
-              </div>
-        })}
-
-        />
-
-        
+                </div>
+              {/* <Card.Main content={post.content}/> */}
+             {/* <Card.Main data={ post.content}/>  */}
+            </Card>
+          )
+        }
+        </Videos>
+        </Grid>
+    {/* </Box> */}
       </header>
     </div>
 
@@ -141,4 +130,4 @@ function App({user, signOut}) {
 }
 
 //export default App;
-export default withAuthenticator(App, { hideSignUp: true });
+export default withAuthenticator(App);
